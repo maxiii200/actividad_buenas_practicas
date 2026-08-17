@@ -37,4 +37,22 @@
 ## Lugar propuesto: Almacenamiento seguro en la nube en una región geográficamente distinta al servidor principal, con cifrado en reposo y políticas de acceso restringido. Nunca en el mismo disco ni servidor donde corre la base de datos de producción
 
 ## Como se identifica cada archivo: 
-## 
+## Formato: `bkp_<nombre_bd>_<tipo>_<AAAAMMDD_HHMMSS>.<ext>`
+
+## Importancia de las pruebas periódicas de restauración:
+## Un respaldo que no ha sido probado no es un respaldo válido.
+  ## Probar periódicamente la restauración en un entorno de pruebas garantiza:
+  ##  1. Que los archivos de backup no estén corruptos.
+  ##  2. Que el procedimiento de recuperación funcione correctamente.
+  ##  3. Medir el tiempo real de recuperación (RTO - *Recovery Time Objective*) y la cantidad máxima de datos que se podrían perder 
+
+## Parte 3: Registro de Cambios
+
+### Bitácora de Registro
+
+| Fecha y hora | Responsable | Cambio realizado | Script / Comando utilizado | Motivo del cambio |
+| :--- | :--- | :--- | :--- | :--- |
+| 2026-08-17 14:30:00 UTC | Administrador DBA (`dba_admin`) | Creación de usuario de base de datos con permisos restringidos de lectura para el equipo de ventas. | *Ver bloque de código adjunto abajo* | Proveer acceso seguro al área de ventas para consultar catálogos e historial de ventas sin riesgo de modificación o borrado accidental de datos. |
+
+### Script / Comando Utilizado
+  
