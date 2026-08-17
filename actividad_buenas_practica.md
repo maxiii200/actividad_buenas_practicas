@@ -55,8 +55,19 @@
 | **Fecha y hora** | 2026-08-17 14:30:00 UTC |
 | **Responsable** | Administrador DBA (`dba_admin`) |
 | **Cambio realizado** | Creación de usuario de base de datos con permisos restringidos de lectura para el equipo de ventas. |
-| **Script/comando utilizado** | *Ver bloque de código adjunto abajo* |
+| **Script/comando utilizado** |  |
 | **Motivo del cambio** | Proveer acceso seguro al área de ventas para consultar catálogos e historial de ventas sin riesgo de modificación o borrado accidental de datos. |
 
 ### Script / Comando Utilizado
-  
+
+```sql
+-- 1. Crear usuario para el equipo de ventas con contraseña segura
+CREATE USER 'usr_ventas'@'%' IDENTIFIED BY 'P@ssw0rd_Seguro_2026!';
+
+-- 2. Asignar privilegios de solo lectura (SELECT) en las tablas requeridas
+GRANT SELECT ON tecnostore.clientes TO 'usr_ventas'@'%';
+GRANT SELECT ON tecnostore.productos TO 'usr_ventas'@'%';
+GRANT SELECT ON tecnostore.ventas TO 'usr_ventas'@'%';
+
+-- 3. Aplicar cambios de privilegios
+FLUSH PRIVILEGES;
