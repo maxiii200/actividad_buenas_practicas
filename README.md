@@ -1,1 +1,0 @@
-# actividad_buenas_practicas
