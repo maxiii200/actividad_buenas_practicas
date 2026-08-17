@@ -50,9 +50,13 @@
 
 ### Bitácora de Registro
 
-| Fecha y hora | Responsable | Cambio realizado | Script / Comando utilizado | Motivo del cambio |
-| :--- | :--- | :--- | :--- | :--- |
-| 2026-08-17 14:30:00 UTC | Administrador DBA (`dba_admin`) | Creación de usuario de base de datos con permisos restringidos de lectura para el equipo de ventas. | *Ver bloque de código adjunto abajo* | Proveer acceso seguro al área de ventas para consultar catálogos e historial de ventas sin riesgo de modificación o borrado accidental de datos. |
+| Campo | Información |
+| :--- | :--- |
+| **Fecha y hora** | 2026-08-17 14:30:00 UTC |
+| **Responsable** | Administrador DBA (`dba_admin`) |
+| **Cambio realizado** | Creación de usuario de base de datos con permisos restringidos de lectura para el equipo de ventas. |
+| **Script/comando utilizado** | *Ver bloque de código adjunto abajo* |
+| **Motivo del cambio** | Proveer acceso seguro al área de ventas para consultar catálogos e historial de ventas sin riesgo de modificación o borrado accidental de datos. |
 
 ### Script / Comando Utilizado
   
