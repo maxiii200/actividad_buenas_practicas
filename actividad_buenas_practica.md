@@ -58,9 +58,9 @@
 | **Script/comando utilizado** |  |
 | **Motivo del cambio** | Proveer acceso seguro al área de ventas para consultar catálogos e historial de ventas sin riesgo de modificación o borrado accidental de datos. |
 
-### Script / Comando Utilizado
+## Script Utilizado
 
-```sql
+sql
 -- 1. Crear usuario para el equipo de ventas con contraseña segura
 CREATE USER 'usr_ventas'@'%' IDENTIFIED BY 'P@ssw0rd_Seguro_2026!';
 
